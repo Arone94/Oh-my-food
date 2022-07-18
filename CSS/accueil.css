@@ -1,0 +1,15 @@
+*
+{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: nom;
+    src: url("");   
+}
+
+body
+{
+    font-family: "name";
+    margin: auto;
+}   
