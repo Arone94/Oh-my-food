@@ -1,0 +1,22 @@
+{
+  "name": "projet3",
+  "version": "1.0.0",
+  "description": "projet 3 - oh my food ",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./Sass/main.scss:./CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arone94/Oh-my-food.git"
+  },
+  "author": "Arone MARCHET",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arone94/Oh-my-food/issues"
+  },
+  "homepage": "https://github.com/Arone94/Oh-my-food#readme",
+  "dependencies": {
+    "sass": "^1.53.0"
+  }
+}
