@@ -1,0 +1,23 @@
+footer{
+    background-color: rgb(31, 31, 31);
+    color: white;
+    display: flex; 
+    & .footer__contenu{
+      margin-left: 28px;
+      margin-top: 8px;
+    }
+    & h4{
+      font-family: "shrikhand", sans-serif;
+      font-weight: 300;
+    }
+    & ul{
+      list-style: none;
+      padding-left: 0px;
+      margin-top: -2px;
+      font-size: 14px;
+      & li a{
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
