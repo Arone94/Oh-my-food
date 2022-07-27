@@ -1,0 +1,108 @@
+.menu-repas{
+    overflow: hidden;
+    h3{
+        font-weight: normal;
+        font-size: 15px;
+        border-bottom: 2px solid $clr-tertiaire ;
+        padding-bottom: 3px;
+        width: 38px;
+    }
+    & .titre_menu_repas{
+        margin-left: 20px;
+    }
+    & .plat{
+        background-color: white;
+        border-radius: 12px;
+        margin-left: 16px;
+        margin-bottom: 10px;       
+        width: 97%;
+        font-size: 15px;
+        height: 50px;        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        @include shadow-default;
+        @media screen and (max-width:767px) {
+            margin-right: 16px;
+            width: inherit;
+        }
+        @for $i from 1 through 13{
+            &:nth-child(#{$i}){
+                animation-delay: 0.1s * $i;
+            }
+        }
+        animation: animation-menu 1s ease;
+        animation-fill-mode: both;
+        &:hover{
+            @include animation-hover;
+        }     
+        &:active{
+            @include animation-active;
+        }        
+        & .plat__description{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            height: 50px;
+            overflow: hidden;         
+        }
+        & h4{
+            margin-top: 0;
+            margin-bottom: -13px;            
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;          
+        }
+        & p{
+            font-size: 13px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; 
+        }
+        & .prix-et-check{            
+            display: flex;
+            margin-right: -45px;
+            transition: all 0.5s;
+            & .prix_texte{
+                padding: 10px;
+                padding-right: 20px;
+                font-size: 13px;
+                font-weight: bold;
+                display: flex;
+                align-items: flex-end;            
+            }
+            & .checked{
+                background-color: $clr-tertiaire;
+                width: 45px;
+                border-radius: 0px 12px 12px 0px;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                & i{
+                    color: $clr-tertiaire;
+                    background-color: white;
+                    border-radius: 50%;
+                    width: 18px;
+                    height: 18px;
+                    font-size: 14px;
+                    padding-top: 3px; 
+                }
+            }
+        }      
+    }
+    & .conteneur-bouton{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    & button{
+        @include bouton_violet-defaut;        
+    }
+    & button:hover{
+        @include bouton_violet-hover;
+      }
+    }
+}

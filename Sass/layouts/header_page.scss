@@ -1,0 +1,13 @@
+.header_page{
+    & button{
+        position: absolute;
+        left: 10px;
+        border: none;
+        background-color: white;
+        color: rgb(54, 54, 54);
+        & a{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}

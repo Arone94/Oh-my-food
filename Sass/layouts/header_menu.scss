@@ -1,0 +1,21 @@
+.header_menu{
+    position: relative;
+    & .titre_restaurant{
+        margin-top: 0px;
+        margin-left: 20px;
+        font-family: "shrikhand", sans-serif;
+    }
+    & i{
+        @include i-typo;
+        top: 0px;
+    }
+    & .fas{
+        @include fas-config;     
+    }
+    & .fas:hover{
+        @include fas-hover-et-media;             
+    }
+    & .fas:active{
+        @include fas-active-et-media;
+    }
+}

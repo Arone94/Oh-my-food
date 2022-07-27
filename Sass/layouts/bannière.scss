@@ -1,0 +1,12 @@
+.bannière{
+    @include bannière-box;
+    & .bannière__img{
+        @include bannière_img;
+    }
+    @media screen and (max-width:767px) {
+        height: 280px;
+        & .bannière__img{
+            height: 280px;
+        }
+    }
+}

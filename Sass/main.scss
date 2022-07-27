@@ -1,17 +1,19 @@
 @import "./utils/variables.scss";
 @import "./utils/mixins.scss";
+@import "./utils/animations.scss";
 @import "./base/base.scss";
+@import "./layouts/loader.scss";
 @import "./layouts/header.scss";
 @import "./layouts/localisation.scss";
 @import "./layouts/explorer.scss";
-@import "./layouts/fonctionnement.scss";
-
-
-
-.footer
-{
-  border: 1px solid black;
-}
-
+@import "./components/fonctionnement.scss";
+@import "./layouts/section.scss";
+@import "./layouts/menu.scss";
+@import "./layouts/footer.scss";
+@import "./layouts/bannière.scss";
+@import "./layouts/header_page.scss";
+@import "./layouts/section_restaurant.scss";
+@import "./layouts/header_menu.scss";
+@import "./layouts/menu-repas.scss";
 
 /*# sourceMappingURL=style.css.map */
