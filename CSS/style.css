@@ -277,12 +277,12 @@ section h3 {
 .menu .carte .carte__description .fas:hover {
   opacity: 1;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .menu .carte .carte__description .fas:hover {
     opacity: 0;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .menu .carte .carte__description .fas:active {
     opacity: 1;
   }
@@ -377,12 +377,12 @@ footer ul li a {
 .header_menu .fas:hover {
   opacity: 1;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .header_menu .fas:hover {
     opacity: 0;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .header_menu .fas:active {
     opacity: 1;
   }
@@ -474,7 +474,7 @@ footer ul li a {
 .menu-repas .plat:hover i {
   animation: check-spin 0.5s ease-in-out;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .menu-repas .plat:hover .prix-et-check {
     margin-right: -45px;
   }
@@ -482,7 +482,7 @@ footer ul li a {
     animation: inherit;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .menu-repas .plat:active .prix-et-check {
     margin-right: 0px;
   }

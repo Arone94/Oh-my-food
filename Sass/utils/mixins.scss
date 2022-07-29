@@ -28,7 +28,7 @@ background-color: rgb(241, 241, 241);
 
 @mixin fas-hover-et-media {
     opacity: 1;
-    @media screen and (max-width:767px) {
+    @media screen and (max-width:991px) {
     &{
         opacity: 0;
     }
@@ -40,7 +40,7 @@ background-color: rgb(241, 241, 241);
 }
 
 @mixin fas-active-et-media {
-    @media screen and (max-width:767px) {
+    @media screen and (max-width:991px) {
         &{
           opacity: 1;
         }
@@ -88,7 +88,7 @@ background-color: rgb(241, 241, 241);
     & i{
         animation: check-spin 0.5s ease-in-out;
     }
-    @media screen and (max-width:767px) {
+    @media screen and (max-width:991px) {
         & .prix-et-check{
             margin-right: -45px;
         }
@@ -99,7 +99,7 @@ background-color: rgb(241, 241, 241);
 }
 
 @mixin animation-active {
-    @media screen and (max-width:767px) {
+    @media screen and (max-width:991px) {
         & .prix-et-check{
             margin-right: 0px;
         }
