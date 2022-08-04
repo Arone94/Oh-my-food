@@ -380,6 +380,7 @@ footer ul li a {
   font-family: "shrikhand", sans-serif;
 }
 .header_menu i {
+  cursor: pointer;
   font-size: 25px;
   right: 25px;
   top: 220px;
