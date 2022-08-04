@@ -8,6 +8,9 @@
     & i{
         @include i-typo;
         top: 0px;
+        @media screen and (max-width:767px) {
+            top: 0px;
+        }
     }
     & .fas{
         @include fas-config;     
