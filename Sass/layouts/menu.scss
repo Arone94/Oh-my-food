@@ -60,6 +60,7 @@
       }
       & .heart{
         display: flex;
+        cursor: pointer;
         & i{
           @include i-typo;
         }

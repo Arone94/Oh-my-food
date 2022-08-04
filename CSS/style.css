@@ -273,6 +273,7 @@ section h3 {
 }
 .menu .carte .heart {
   display: flex;
+  cursor: pointer;
 }
 .menu .carte .heart i {
   font-size: 25px;
