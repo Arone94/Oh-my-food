@@ -17,6 +17,26 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-46%);
+    transform: translateX(-46%);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-46%);
+    transform: translateX(-46%);
+  }
+}
 @keyframes animation-menu {
   0% {
     transform: translateY(50%);
@@ -275,6 +295,15 @@ section h3 {
   display: flex;
   cursor: pointer;
 }
+.menu .carte .heart input {
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 991px) and (max-width: 991px) {
+  .menu .carte .heart input:checked ~ .fas {
+    opacity: 1;
+  }
+}
 .menu .carte .heart i {
   font-size: 25px;
   right: 25px;
@@ -300,11 +329,6 @@ section h3 {
 @media screen and (max-width: 991px) {
   .menu .carte .heart .fas:hover {
     opacity: 0;
-  }
-}
-@media screen and (max-width: 991px) {
-  .menu .carte .heart .fas:active {
-    opacity: 1;
   }
 }
 
@@ -379,6 +403,15 @@ footer ul li a {
   margin-left: 20px;
   font-family: "shrikhand", sans-serif;
 }
+.header_menu input {
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 991px) and (max-width: 991px) {
+  .header_menu input:checked ~ .fas {
+    opacity: 1;
+  }
+}
 .header_menu i {
   cursor: pointer;
   font-size: 25px;
@@ -413,11 +446,6 @@ footer ul li a {
     opacity: 0;
   }
 }
-@media screen and (max-width: 991px) {
-  .header_menu .fas:active {
-    opacity: 1;
-  }
-}
 
 .menu-repas {
   overflow: hidden;
@@ -444,8 +472,10 @@ footer ul li a {
   flex-direction: row;
   justify-content: space-between;
   overflow: hidden;
+  cursor: pointer;
   white-space: nowrap;
   text-overflow: ellipsis;
+  position: relative;
   box-shadow: 2px 4px 6px rgb(190, 190, 190);
   animation: animation-menu 1s ease;
   animation-fill-mode: both;
@@ -495,26 +525,24 @@ footer ul li a {
 .menu-repas .plat:nth-child(13) {
   animation-delay: 1.3s;
 }
-@media screen and (min-width: 992px) {
-  .menu-repas .plat:hover {
-    opacity: 0.9;
-    box-shadow: 2px 5px 7px rgb(163, 163, 163);
+.menu-repas .plat input {
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  .menu-repas .plat input:checked ~ .prix-et-check {
+    margin-right: 0px;
   }
+  .menu-repas .plat input:checked ~ .prix-et-check i {
+    animation: check-spin 0.5s ease-in-out forwards;
+  }
+}
+@media screen and (min-width: 992px) {
   .menu-repas .plat:hover .prix-et-check {
     margin-right: 0px;
   }
   .menu-repas .plat:hover i {
-    animation: check-spin 0.5s ease-in-out;
-  }
-}
-@media screen and (max-width: 991px) {
-  .menu-repas .plat:active .prix-et-check {
-    animation: margin-right 0.5s ease;
-    animation-fill-mode: backwards;
-  }
-  .menu-repas .plat:active i {
-    animation: check-spin 0.5s ease-in-out;
-    animation-fill-mode: forwards;
+    animation: check-spin 0.5s ease-in-out forwards;
   }
 }
 .menu-repas .plat .plat__description {
@@ -523,6 +551,10 @@ footer ul li a {
   padding: 10px;
   height: 50px;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  width: 100%;
 }
 .menu-repas .plat h4 {
   margin-top: 0;
@@ -539,8 +571,17 @@ footer ul li a {
 }
 .menu-repas .plat .prix-et-check {
   display: flex;
-  margin-right: -45px;
-  transition: all 0.5s;
+  justify-content: flex-end;
+  margin-right: -50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 767px) {
+  .menu-repas .plat .prix-et-check {
+    margin-right: -100px;
+  }
 }
 .menu-repas .plat .prix-et-check .prix_texte {
   padding: 10px;
@@ -549,15 +590,21 @@ footer ul li a {
   font-weight: bold;
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
 }
 .menu-repas .plat .prix-et-check .checked {
   background-color: #99E2D0;
-  width: 45px;
+  width: 50px;
   border-radius: 0px 12px 12px 0px;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .menu-repas .plat .prix-et-check .checked {
+    width: 110px;
+  }
 }
 .menu-repas .plat .prix-et-check .checked i {
   color: #99E2D0;

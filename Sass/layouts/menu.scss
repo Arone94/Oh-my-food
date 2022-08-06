@@ -61,6 +61,15 @@
       & .heart{
         display: flex;
         cursor: pointer;
+        & input{
+          cursor: pointer;
+          display: none;
+          @media screen and (max-width:991px){
+              &:checked ~ .fas{
+                @include fas-active-et-media;
+              }
+          }  
+        }
         & i{
           @include i-typo;
         }
@@ -70,11 +79,7 @@
         & .fas:hover{
           @include fas-hover-et-media;
         }
-        & .fas:active{
-          @include fas-active-et-media;
-        }
-
       }
-      
-    }
-  }
+    }     
+}
+  

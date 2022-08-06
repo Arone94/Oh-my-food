@@ -10,6 +10,7 @@
     & .titre_menu_repas{
         margin-left: 20px;
     }
+
     & .plat{
         background-color: white;
         border-radius: 12px;
@@ -22,8 +23,10 @@
         flex-direction: row;
         justify-content: space-between;
         overflow: hidden;
+        cursor: pointer;
         white-space: nowrap;
         text-overflow: ellipsis;
+        position: relative;
         @include shadow-default;
         @media screen and (max-width:767px) {
             margin-right: 16px;
@@ -36,20 +39,39 @@
         }
         animation: animation-menu 1s ease;
         animation-fill-mode: both;
+        & input{
+            cursor: pointer;
+            display: none;
+            @media screen and (max-width:991px){
+                &:checked ~ .prix-et-check{
+                    margin-right: 0px;
+                    i {
+                        animation: check-spin 0.5s ease-in-out forwards;
+                    }   
+                }
+            }  
+        }
         &:hover{
             @media screen and (min-width:992px){
-                @include animation-hover;
-            }
+                & .prix-et-check{           
+                    margin-right: 0px;                  
+                }
+                & i{
+                    animation: check-spin 0.5s ease-in-out forwards;
+                }
+            }            
         }     
-        &:active{
-            @include animation-active;
-        }        
+              
         & .plat__description{
             display: flex;
             flex-direction: column;
             padding: 10px;
             height: 50px;
-            overflow: hidden;         
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 100%;
+            width: 100%;     
         }
         & h4{
             margin-top: 0;
@@ -62,28 +84,39 @@
             font-size: 13px;
             overflow: hidden;
             white-space: nowrap;
-            text-overflow: ellipsis; 
+            text-overflow: ellipsis;
         }
         & .prix-et-check{            
             display: flex;
-            margin-right: -45px;
-            transition: all 0.5s;
+            justify-content: flex-end;
+            margin-right: -50px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; 
+            transition: all 0.5s ease-in-out;
+            @media screen and (max-width:767px) {
+                margin-right: -100px;
+            }       
             & .prix_texte{
                 padding: 10px;
                 padding-right: 20px;
                 font-size: 13px;
                 font-weight: bold;
                 display: flex;
-                align-items: flex-end;            
+                align-items: flex-end;
+                justify-content: flex-end;            
             }
             & .checked{
                 background-color: $clr-tertiaire;
-                width: 45px;
+                width: 50px;
                 border-radius: 0px 12px 12px 0px;
                 display: flex;
                 text-align: center;
                 align-items: center;
                 justify-content: center;
+                @media screen and (max-width:767px) {
+                    width: 110px;
+                }             
                 & i{
                     color: $clr-tertiaire;
                     background-color: white;
